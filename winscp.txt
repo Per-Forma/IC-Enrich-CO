@@ -1,0 +1,9 @@
+option batch abort
+option confirm off
+open ftps://username:password@ftp.excent.com:21/ -explicit -passive=on -certificate="6b:b9:df:4b:f5:f7:12:a0:73:c7:1a:8d:29:05:7f:e2:4f:aa:6c:aa"
+cd /SISDATA/Files_To_Validate/
+pwd
+ls
+put -transfer=binary "pathtofiles\*.csv"
+close
+exit
